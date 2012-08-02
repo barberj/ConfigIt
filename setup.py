@@ -62,7 +62,7 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
-        "License :: MIT License",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.2",
