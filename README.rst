@@ -12,11 +12,13 @@ Python is all about the dicts so why do we settle for `INIs <http://en.wikipedia
 Features
 --------
 
-Read configurations from a module, file, or a dictionary
+All configuration files are native python files.
+
+Using ConfigIt you can read those files in as a module, or file
 and return a dictionary with attribute access.
 
 One of the most powerful things about configit is its ability to use other
-configurations.
+configurations within a configuration.
 
 
 Installation
@@ -25,6 +27,23 @@ Installation
 To install configit, simply: ::
 
     $ pip install configit
+
+
+API Documentation
+-----------------
+
+
+configit.conf_from_file(filepath)
+    Reads a string file path and returns dictionary.
+```
+filepath = r'tests/configs/default.py'
+config = conf_from_file(filepath)
+assert config.config_dict.name == 'default'
+```
+
+configit.conf_from_module(module)
+configit.conf_from_dict(conf_dict)
+configit.use(conf_source)
 
 
 Contribution

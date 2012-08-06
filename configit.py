@@ -109,17 +109,6 @@ def conf_from_dict(conf_dict):
     return conf
 
 
-def convert_str_to_config(conf_path):
-    conf_path = conf_path.replace(r'/', '.')
-
-    fromlist = conf_path.split('.')
-    if fromlist[-1] == 'py':
-        fromlist = fromlist[:-1]
-    name = '.'.join(fromlist)
-
-    return name, fromlist
-
-
 def import_module(conf):
     '''
     Imports the configuration as a module.
