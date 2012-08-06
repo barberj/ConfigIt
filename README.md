@@ -1,4 +1,0 @@
-ConfigIt
-========
-
-Python Configurations
