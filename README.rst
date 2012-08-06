@@ -34,11 +34,13 @@ API Documentation
 
 
 configit.conf_from_file(filepath)
-    Reads a string file path and returns a ConfigDict. ::
+    Reads a string file path and returns a ConfigDict.
+::
     filepath = r'tests/configs/default.py'
 
     config = conf_from_file(filepath)
     assert config.config_dict.name == 'default'
+
 
 configit.conf_from_module(module)
 configit.conf_from_dict(conf_dict)
