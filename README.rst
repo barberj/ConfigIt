@@ -31,8 +31,19 @@ Contribution
 ------------
 
 #. Fork `the repository`_ on Github.
-#. Write a test which shows that the bug was fixed or that the feature works as expected.
-#. Send a pull request and bug the maintainer until it gets merged and published. :) Make sure to add yourself to AUTHORS_.
+#. Install to your env or venv by running: ::
+
+    $ python setup.py develop
+
+#. Hack-a-thon, dance party!
+#. Write a test which shows that the bug was fixed
+or that the feature works as expected.
+#. Test by running: ::
+
+    $ python setup.py test
+
+#. Send a pull request and bug the maintainer
+until it gets merged and published. :) Make sure to add yourself to AUTHORS_.
 
 .. _`the repository`: http://github.com/pictage/ConfigIt
 .. _AUTHORS: https://github.com/pictage/ConfigIt/blob/master/AUTHORS.rst
