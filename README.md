@@ -1,5 +1,4 @@
-ConfigIt
-========
+#ConfigIt
 
 .. image:: TODO
 
@@ -9,8 +8,7 @@ by the camera shy people at `Pictage <http://www.pictage.com>`_.
 Python is all about the dicts so why do we settle for `INIs <http://en.wikipedia.org/wiki/INI_file>`_?
 
 
-Features
---------
+##Features
 
 All configuration files are native python files.
 
@@ -21,8 +19,7 @@ One of the most powerful things about configit is its ability to use other
 configurations within a configuration.
 
 
-Installation
-------------
+##Installation
 
 To install configit, simply: ::
 
