@@ -76,7 +76,7 @@ answer=42
 import configit
 configit.use('file_supplement.py')
 ```
-**Code using configit to get the configuration**
+**Code** using configit to get the configuration:
 ```python
 import configit
 config = conf_from_file('file.py')
@@ -94,7 +94,7 @@ import configit
 configit.use('file_supplement.py')
 answer=5
 ```
-**Code using configit to get the configuration**
+**Code** using configit to get the configuration:
 ```python
 import configit
 config = conf_from_file('file.py')
