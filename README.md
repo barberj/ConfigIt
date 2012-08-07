@@ -8,7 +8,7 @@ by the camera shy people at `Pictage <http://www.pictage.com>`_.
 Python is all about the dicts so why do we settle for `INIs <http://en.wikipedia.org/wiki/INI_file>`_?
 
 
-##Features
+###Features
 
 All configuration files are native python files.
 
@@ -19,47 +19,42 @@ One of the most powerful things about configit is its ability to use other
 configurations within a configuration.
 
 
-##Installation
+###Installation
 
-To install configit, simply: ::
+To install configit, simply:
 
     $ pip install configit
 
 
-API Documentation
------------------
+###API Documentation
 
 
-configit.conf_from_file(filepath)
+######configit.conf_from_file(filepath)
     Reads a string file path and returns a ConfigDict.
 ```python
-    filepath = r'tests/configs/default.py'
+filepath = r'tests/configs/default.py'
 
-    config = conf_from_file(filepath)
-    assert config.config_dict.name == 'default'
+config = conf_from_file(filepath)
+assert config.config_dict.name == 'default'
 ```
 
 
-configit.conf_from_module(module)
-configit.conf_from_dict(conf_dict)
-configit.use(conf_source)
+######configit.conf_from_module(module)
+######configit.conf_from_dict(conf_dict)
+######configit.use(conf_source)
 
 
-Contribution
-------------
+###Contribution
 
-#. Fork `the repository`_ on Github.
-#. Install to your env or venv by running: ::
+1. Fork [the repository](https://github.com/pictage/ConfigIt) on Github.
+1. Install to your env or venv by running: ::
 
     $ python setup.py develop
 
-#. Hack-a-thon, dance party!
-#. Write a test which shows that the bug was fixed or that the feature works as expected.
-#. Test by running: ::
+1. Hack-a-thon, dance party!
+1. Write a test which shows that the bug was fixed or that the feature works as expected.
+1. Test by running: ::
 
     $ python setup.py test
 
-#. Send a pull request and bug the maintainer until it gets merged and published. :) Make sure to add yourself to AUTHORS_.
-
-.. _`the repository`: http://github.com/pictage/ConfigIt
-.. _AUTHORS: https://github.com/pictage/ConfigIt/blob/master/AUTHORS.rst
+1. Send a pull request and bug the maintainer until it gets merged and published. :) Make sure to add yourself to [AUTHORS](https://github.com/pictage/ConfigIt/blob/master/AUTHORS.md).
