@@ -1,7 +1,7 @@
 ConfigIt
 ========
 
-.. image:: todo
+.. image:: https://secure.travis-ci.org/pictage/ConfigIt.png?branch=develop
 
 ConfigIt is MIT Licensed Python Configuration library brought to you
 by the camera shy people at `Pictage <http://www.pictage.com>`_.
