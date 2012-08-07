@@ -29,7 +29,7 @@ To install configit, simply:
 ###API Documentation
 
 
-######configit.conf_from_file(filepath)
+#####configit.conf_from_file(filepath)
 Reads a string file path and returns a ConfigDict.
 ```python
 filepath = r'tests/configs/default.py'
@@ -39,7 +39,7 @@ assert config.config_dict.name == 'default'
 ```
 
 
-######configit.conf_from_module(module)
+#####configit.conf_from_module(module)
 Read an imported module and returns a ConfigDict.
 ```python
 import tests.configs.module_config
@@ -49,7 +49,7 @@ assert config.config_dict.name == 'module_config'
 ```
 
 
-######configit.conf_from_dict(conf_dict)
+#####configit.conf_from_dict(conf_dict)
 Reads a dictionary and returns a ConfigDict.
 ConfigDicts are accessible by attributes as well as keys.
 ```python
@@ -60,32 +60,41 @@ assert config.answer == 42
 ```
 
 
-######configit.use(conf_source)
+#####configit.use(conf_source)
 Within a python configuration you can import another python configuration.
 The imported configuration will update local name space of the importing configuration.
 This means values in sub configuration will be accessible in the local configuration.
 
 This can be useful for boiler plate configurations where you only need a few items changed.
-**file_supplement.py**
-    answer=42
 
-**file.py**
-    import configit
-    configit.use('file_supplement.py')
+**file_supplement.py** contents:
+```python
+answer=42
+```
+**file.py** contents:
+```python
+import configit
+configit.use('file_supplement.py')
+```
+
 ```python
 import configit
 config = conf_from_file('file.py')
 
 assert config.answer == 42
 ```
-#######Order matters!
-**file_supplement.py**
-    answer=42
+######Order matters!
+**file_supplement.py** contents:
+```python
+answer=42
+```
+**file.py** contents:
+```python
+import configit
+configit.use('file_supplement.py')
+answer=5
+```
 
-**file.py**
-    import configit
-    configit.use('file_supplement.py')
-    answer=5
 ```python
 import configit
 config = conf_from_file('file.py')
