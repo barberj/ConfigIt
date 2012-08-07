@@ -1,11 +1,11 @@
 #ConfigIt
 
-.. image:: TODO
+![Travis Tests Status](todo)
 
 ConfigIt is MIT Licensed Python Configuration library brought to you
-by the camera shy people at `Pictage <http://www.pictage.com>`_.
+by the camera shy people at [Pictage](http://www.pictage.com>).
 
-Python is all about the dicts so why do we settle for `INIs <http://en.wikipedia.org/wiki/INI_file>`_?
+Python is all about the dicts so why do we settle for [INIs](http://en.wikipedia.org/wiki/INI_file>)?
 
 
 ###Features
@@ -76,7 +76,7 @@ answer=42
 import configit
 configit.use('file_supplement.py')
 ```
-
+**Code using configit to get the configuration**
 ```python
 import configit
 config = conf_from_file('file.py')
@@ -94,13 +94,16 @@ import configit
 configit.use('file_supplement.py')
 answer=5
 ```
-
+**Code using configit to get the configuration**
 ```python
 import configit
 config = conf_from_file('file.py')
 
 assert config.answer == 5
 ```
+
+
+###For further use examples refer to included tests
 
 
 ###Contribution
