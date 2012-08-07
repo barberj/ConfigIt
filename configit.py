@@ -2,7 +2,7 @@ import inspect
 import os
 import sys
 
-__version__ = 1.0
+__version__ = 1.1
 version = __version__
 
 try:
