@@ -45,7 +45,7 @@ configit.conf_from_file(filepath)
 
 
 configit.conf_from_module(module)
-    Read an imported module and returns a ConfigDict.
+    Reads an imported module and returns a ConfigDict.
 
 ::
 
