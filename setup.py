@@ -54,10 +54,11 @@ setup(
     author_email="dev@pictage.com",
     description=("Python Configurations"),
     long_description=open('README.rst').read(),
-    license="MIT License",
+    license="MIT",
     keywords="configuration",
     url="https://github.com/pictage/ConfigIt",
     py_modules=["configit"],
+    package_data={'configit':["README.rst"]},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Topic :: Utilities",
