@@ -49,7 +49,7 @@ class TestCommand(test):
 
 setup(
     name="ConfigIt",
-    version=configit.__version__,
+    version=configit.version,
     author="Pictage",
     author_email="dev@pictage.com",
     description=("Python Configurations"),

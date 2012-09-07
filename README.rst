@@ -32,30 +32,30 @@ To install configit, simply: ::
 API Documentation
 -----------------
 
-configit.conf_from_file(filepath)
+configit.from_file(filepath)
     Reads a string file path and returns a ConfigDict. 
 
 ::
 
     filepath = r'tests/configs/default.py'
 
-    config = conf_from_file(filepath)
+    config = from_file(filepath)
     assert config.config_dict.name == 'default'
 
 
 
-configit.conf_from_module(module)
+configit.from_module(module)
     Reads an imported module and returns a ConfigDict.
 
 ::
 
     import tests.configs.module_config
 
-    config = conf_from_module(tests.configs.module_config)
+    config = configit.from_module(tests.configs.module_config)
     assert config.config_dict.name == 'module_config'
 
 
-configit.conf_from_dict(conf_dict)
+configit.from_dict(conf_dict)
     Reads a dictionary and returns a ConfigDict.
 
     ConfigDicts are accessible by attributes as well as keys.
@@ -64,7 +64,7 @@ configit.conf_from_dict(conf_dict)
 
     config = dict(answer=42)
 
-    config = configit.conf_from_dict(config)
+    config = configit.from_dict(config)
     assert config.answer == 42
 
 
@@ -87,7 +87,7 @@ configit.use(conf_source)
         **Code** using configit to get the configuration: ::
 
             import configit
-            config = conf_from_file('file.py')
+            config = configit.from_file('file.py')
 
             assert config.answer == 42
 
@@ -106,7 +106,7 @@ configit.use(conf_source)
         **Code** using configit to get the configuration: ::
 
             import configit
-            config = conf_from_file('file.py')
+            config = configit.from_file('file.py')
 
             assert config.answer == 5
 

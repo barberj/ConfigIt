@@ -1,9 +1,11 @@
 import inspect
 import os
 import sys
+import warnings
+warnings.simplefilter("always")
 
-__version__ = 1.1
-version = __version__
+__version__ = (0,1,2)
+version = '.'.join(map(str,__version__))
 
 try:
     unicode
@@ -41,15 +43,19 @@ def use(conf_source):
     '''
 
     if isinstance(conf_source, basestring):
-        conf_dict = conf_from_file(conf_source)
+        conf_dict = from_file(conf_source)
     elif inspect.ismodule(conf_source):
-        conf_dict = conf_from_module(conf_source)
+        conf_dict = from_module(conf_source)
 
     _locals_dict = sys._getframe(1).f_locals
     _locals_dict.update(conf_dict)
 
 
 def conf_from_module(module):
+    warnings.warn("Deprecated. Use configit.from_module", DeprecationWarning)
+    return from_module(module)
+
+def from_module(module):
     '''
     Creates a configuration dictionary from a module.
 
@@ -59,12 +65,16 @@ def conf_from_module(module):
     if isinstance(module, str):
         module = import_module(module)
     module_dict = dict(inspect.getmembers(module))
-    conf_dict = conf_from_dict(module_dict)
+    conf_dict = from_dict(module_dict)
 
     return conf_dict
 
 
 def conf_from_file(filepath):
+    warnings.warn("Deprecated. Use configit.from_file", DeprecationWarning)
+    return from_file(filepath)
+
+def from_file(filepath):
     '''
     Creates a configuration dictionary from a file.
 
@@ -82,13 +92,17 @@ def conf_from_file(filepath):
                       '%s\n'
                       '%s' % (abspath, ioerror))
 
-    conf_dict = conf_from_dict(conf_dict)
+    conf_dict = from_dict(conf_dict)
     conf_dict['__config_file__'] = abspath
 
     return conf_dict
 
 
 def conf_from_dict(conf_dict):
+    warnings.warn("Deprecated. Use configit.from_file", DeprecationWarning)
+    return from_dict(conf_dict)
+
+def from_dict(conf_dict):
     '''
     Creates a configuration dictionary from a dictionary.
 
@@ -103,7 +117,7 @@ def conf_from_dict(conf_dict):
         if inspect.ismodule(v):
             continue
         if isinstance(v, dict):
-            v = conf_from_dict(v)
+            v = from_dict(v)
 
         conf[k] = v
     return conf
