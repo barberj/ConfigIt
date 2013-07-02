@@ -85,8 +85,9 @@ def from_file(filepath):
     conf_dict = {}
 
     try:
-        exec(compile(open(abspath).read(), abspath, 'exec'),
-             globals(), conf_dict)
+        with open(abspath , 'rb') as f:
+            content = f.read()
+        exec(compile(content, abspath, 'exec'), globals(), conf_dict)
     except IOError as ioerror:
         raise IOError('Error while trying to get configuration from file: '
                       '%s\n'
