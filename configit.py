@@ -4,7 +4,7 @@ import sys
 import warnings
 warnings.simplefilter("always")
 
-__version__ = (0,1,2)
+__version__ = (0,1,3)
 version = '.'.join(map(str,__version__))
 
 try:
