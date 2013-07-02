@@ -4,7 +4,7 @@ various contributors.
 Camera shy people at Pictage including:
 ---------------------------------------
 
-- Justin Barber <jbarber@pictage.com>
+- Justin Barber <barber.justin@gmail.com>
 
 
 Contributors:
